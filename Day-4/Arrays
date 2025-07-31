@@ -1,0 +1,28 @@
+HTML Code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+</body>
+</html>
+
+JS Code
+const obj={
+    firstName:"sri",
+    lastName:"Anu",
+    age:19,
+    graduated:false,
+    joining_Date:new Date("04/01/2025"),
+    number_of_days:()=>{
+        let curr=new Date()
+        return curr-obj.joining_Date
+    }
+}
+let{firstName,lastName,age,graduated,joining_Date,number_of_days}=obj
+console.log(math.floor(number_of_days)/(1000*3600*24))
+
