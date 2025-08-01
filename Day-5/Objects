@@ -1,0 +1,48 @@
+
+//OBJECTs
+const obj={
+    firstName:"sri",
+    lastName:"Anu",
+    age:19,
+    graduated:false,
+    joining_Date:new Date("04/01/2025"),
+    number_of_days:()=>{
+        let curr=new Date()
+        return curr-obj.joining_Date
+    }
+}
+let{firstName,lastName,age,graduated,joining_Date,number_of_days}=obj
+console.log(math.floor(number_of_days)/(1000*3600*24))
+
+
+const obj={
+    firstName:"sri",
+    mark:19,
+}
+class person{
+    constructor(firstName,mark){
+        this.firstname = firstname;
+        this.mark = mark;
+    }
+}
+let obj2=new person("sowndarya",100)
+obj2.firstname 
+
+//Object Methods
+
+const arr =[2,33,43,5,13,48,56]
+//filter
+let filteredArr=arr.filter((x)=>x%2==0)
+console.log(filteredArr)
+
+//reduce
+let sum = arr.reduce((acc,val)=>{acc+val})
+console.log(sum)
+
+//slice
+let copyArr=arr.slice(2,3)
+console.log(copyArr)
+
+//splice
+arr.splice(2,4)
+console.log(arr)
