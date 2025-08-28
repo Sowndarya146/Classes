@@ -1,0 +1,19 @@
+js code:
+
+let taskItems = [];
+
+function addTask(event){
+    event.preventDefault();
+    document.getElementById("res").innerHTML = " "
+    const taskInput = document.getElementById("taskInput").value
+    taskItems.push(taskInput)
+    console.log(taskItems)
+    taskItems.map((val,ind)=> {
+        document.getElementById("res").innerHTML += "<li>" + val + "</li>"
+    })
+    document.getElementById("taskInput").value= " " ;
+}
+
+
+
+
