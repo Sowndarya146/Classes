@@ -1,0 +1,19 @@
+class Animal{
+    constructor(animal){
+        this.listOfAnimal=animal;
+    }
+    splitByGroup(){
+        console.log("splitting");
+    }
+}
+
+class Dog extends Animal{
+    constructor(dogName){
+        super(dogName)
+    }
+}
+
+
+const dogbreed=new Dog("labrador");
+console.log(dogbreed.listOfAnimal);
+dogbreed.splitByGroup()
