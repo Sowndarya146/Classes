@@ -1,0 +1,59 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>StopWatch</h2>
+    <h2 id="timer">00:00</h2>
+    <div>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Reset</button>
+    </div>
+<script src="script.js"></script>
+</body>
+</html> 
+
+javascript
+let sec=0;
+let min=0;
+let interval;
+/*
+function updateDisplay(){
+    const mins=String(Math.floor(seconds/60)).padStart(2,'0');
+    const secs=String(seconds%60).padStart(2,'0');
+    document.getElementById("timer").textContent='${mins}:${secs}';
+}*/
+function start(){
+    if(!interval){
+    interval =setInterval(function(){
+        ++sec;
+        if(sec==60){
+            ++min;
+            sec=0;
+        }
+        if(min==60){
+            min=0;
+        }
+        document.querySelector("#timer").innerHTML = '$min'.padStart(2,'0')+":"+'$sec'.padStart(2,'0');
+    },1000)
+    }
+}
+
+function stop(){
+    clearInterval(interval)
+    interval=undefined;
+}
+
+function reset(){
+    clearInterval(interval)
+    interval=undefined;
+    min=0;
+    sec=0;
+    document.querySelector("#timer").innerHTML ="00:00";
+}
